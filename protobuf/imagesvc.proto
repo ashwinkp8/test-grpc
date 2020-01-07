@@ -3,7 +3,7 @@ syntax = "proto3";
 package image;
 
 service ImageServer {
-    rpc FetchImage(RpmList) returns (ImageUri) {}
+    rpc FetchImage(FilesList) returns (ImageUri) {}
 }
 
 message FilesList {
