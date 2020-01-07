@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package image;
+
+service ImageServer {
+    rpc FetchImage(RpmList) returns (ImageUri) {}
+}
+
+message FilesList {
+    repeated string fileName = 1;
+}
+
+message ImageUri {
+    string imageLocation = 1;
+}

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+protoc -I protobuf/ --go_out=plugins=grpc:protobuf/ protobuf/imagesvc.proto
+
+go build -o rpcserver server/main.go
+
+go build -o rpcclient client/main.go
