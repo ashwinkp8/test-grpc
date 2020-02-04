@@ -2,8 +2,15 @@ syntax = "proto3";
 
 package image;
 
+import "google/api/annotations.proto";
+
 service ImageServer {
-    rpc FetchImage(FilesList) returns (ImageUri) {}
+    rpc FetchImage(FilesList) returns (ImageUri) {
+        option (google.api.http) = {
+            post: "/v1/imageserver"
+            body: "*"
+        };
+    }
 }
 
 message FilesList {
