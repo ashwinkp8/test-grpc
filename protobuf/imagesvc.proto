@@ -15,6 +15,7 @@ service ImageServer {
 
 message FilesList {
     repeated string fileName = 1;
+    string tar = 2;
 }
 
 message ImageUri {
